@@ -162,7 +162,7 @@ public class JuegoMatriz {
 
     public static void combate(int[] personaje, int[] enemigo) {
         Scanner scanner = crearScanner();
-        System.out.println("¡Se a iniciado una batalla!  Atacar (a) o Huir (h):");
+        System.out.println("Se a iniciado una batalla  Atacar (a) o Huir (h):");
         String accion = scanner.nextLine().toLowerCase();
         while (enemigo[0] > 0 && personaje[0] > 0) {
             if (accion.equals("a")) {
@@ -183,8 +183,6 @@ public class JuegoMatriz {
                 System.out.println("Has derrotado al enemigo");
             }
             System.out.println("Atacar: (a) o Huir (h)");
-            accion = scanner.nextLine().toLowerCase();
-
         }
     }
 
@@ -192,9 +190,8 @@ public class JuegoMatriz {
         Random random = new Random();
         System.out.println("has encontrado un cofre ¿lo quieres abrir? (S/N)");
         Scanner scanner = crearScanner();
-        String respuesta = scanner.nextLine().toLowerCase();
-
-        if (respuesta.equals("s")) {
+        String eleccion = scanner.nextLine().toLowerCase();
+        if (eleccion.equals("s")) {
             if (random.nextBoolean()) {
                 int pocion = 20;
                 personaje[0] += pocion;
